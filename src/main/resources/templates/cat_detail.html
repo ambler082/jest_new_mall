@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="layout::head">
+  <meta charset="UTF-8">
+  <title>Product Detail</title>
+  <style>
+    /* Add your custom styles here */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .product-image {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  max-width:50%;
+  height: auto;
+}
+
+.product-image img {
+  
+  height: auto;
+  max-width: 50%;
+  max-height: 50%;
+}
+
+    .product-meta {
+      font-size: 14px;
+      color: #888;
+      margin-bottom: 10px;
+    }
+
+    .price {
+      font-size: 20px;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .description {
+      margin-bottom: 20px;
+    }
+
+    .add-to-cart {
+      margin-bottom: 20px;
+    }
+
+    .add-to-cart input[type="number"] {
+      width: 60px;
+      padding: 5px;
+      margin-right: 10px;
+    }
+
+    .add-to-cart button {
+      padding: 10px 20px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    .add-to-cart button:hover {
+      background-color: #555;
+    }
+
+    .reviews {
+      margin-bottom: 20px;
+    }
+
+    .review {
+      margin-bottom: 10px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .review .author {
+      font-weight: bold;
+    }
+
+    .review .rating {
+      color: #f90;
+    }
+    
+  </style>
+</head>
+
+<body>
+  <nav th:replace="layout::nav"></nav>
+  <div class="container">
+    <h1>상품 1</h1>    
+    <div class="product-meta">
+      Categories > <a href="#">고양이</a> > <a href="#">페르시안</a>
+    </div>
+    <hr>
+    <div class="product-image">
+      <img src="/img/Black_Cat.png" alt="Product Image">
+    </div>
+    <div class="분양가">
+      0원
+    </div>
+    <hr>
+    <div class="description">
+      <h2>품종</h2>
+      <p>페르시안은 고대 고양이 품종이며, 그 역사는 별로 잘 알려져 있지 않습니다. 17세기에 피에트로 델라 발레가 페르시아에서 이탈리아로 고양이 한 마리를 데려오면서 시작 되었습니다. 이 고양이는 페르시아에서는 사막에서 사는 모래 고양이로 알려져 왔습니다.</p>
+    </div>
+    <hr>
+    <div class="add-to-cart">
+      <h2>Add to Cart</h2>
+      <input type="number" name="quantity" min="1" value="1">
+      <button>Add to Cart</button>
+    </div>
+    <hr>
+    <div class="reviews">
+      <h2>후기</h2>
+      <div class="review">
+        <div class="author">집사1</div>
+        <div class="rating">★★★★★</div>
+        <p>내 밥 뺏어먹음</p>
+      </div>
+      <div class="review">
+        <div class="author">집사2</div>
+        <div class="rating">★★★★★</div>
+        <p>너무 귀여웡</p>
+      </div>
+    </div>
+  </div>
+</body>
+<footer th:replace="layout::footer"></footer>
+</html>

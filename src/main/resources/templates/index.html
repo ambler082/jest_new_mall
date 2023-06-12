@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head th:replace="layout::head"></head>
+  <body>
+    <nav th:replace="layout::nav"></nav>
+    <div class="wrapper">
+      <div class="image-container">
+        <img class="img-fluid" src="/img/kitty.jpg" alt="My Image" />
+        <div class="overlay">
+          <a class="text-center" style="color: black"><h1>Pet Shop</h1></a>
+          <div class="white-box">
+            <div class="cell">
+              <a href="#" class="icon-link"
+                ><img src="/img/Black_Cat.png" alt="Pictogram 1"
+              /></a>
+              <p class="cell-text">고양이 분양</p>
+            </div>
+            <div class="cell">
+              <a href="#" class="icon-link"
+                ><img src="/img/Dog.png" alt="Pictogram 2"
+              /></a>
+              <p class="cell-text">강아지 분양</p>
+            </div>
+            <div class="cell">
+              <a href="#" class="icon-link"
+                ><img src="/img/kitty.jpg" alt="Pictogram 3"
+              /></a>
+              <p class="cell-text">근처 미용실</p>
+            </div>
+            <div class="cell">
+              <a th:href="@{/question/list}" class="icon-link"
+                ><img src="/img/board.jpeg" alt="Pictogram 4"
+              /></a>
+              <p class="cell-text">문의사항</p>
+            </div>
+          </div>
+          <p class="source">
+            Source:
+            <a
+              href="https://kr.freepik.com/free-photo/adorable-kitty-looking-like-it-want-to-hunt_20083065.htm#query=cat&position=0&from_view=keyword&track=sph"
+              >Freepik</a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+  <footer th:replace="layout::footer"></footer>
+</html>

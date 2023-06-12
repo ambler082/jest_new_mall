@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head th:fragment="head">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SBB 프로젝트</title>
+    <!-- 부트스트랩적용 및 커스텀 CSS 적용 -->
+    <link rel="stylesheet" th:href="@{/bootstrap.min.css}" />
+    <link rel="stylesheet" th:href="@{/style.css}" />
+    <!-- 부트스트랩 JS 적용 -->
+    <script th:src="@{/bootstrap.bundle.min.js}"></script>
+  </head>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-text">Footer</p>
+    </div>
+  </footer>

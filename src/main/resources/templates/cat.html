@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head th:replace="layout::head"></head>
+  <body>
+    <nav th:replace="layout::nav"></nav>
+    <h1>고양이 분양</h1>
+
+    <div class="container">
+      <div class="row">
+        <!-- 상품 목록 페이지 -->
+        <div class="product-list">
+          <div class="product-item">
+            <a th:href="@{/cat_detail}">
+              <img
+                src="/goods/다운로드.jpg"
+                alt="상품 1"
+                width="300"
+                height="200"
+              />
+            </a>
+            <h3>상품 1</h3>
+            <p>상품 1의 설명</p>
+          </div>
+          <div class="product-item">
+            <a href="/goods_detail/2">
+              <img
+                src="/goods/다운로드 (1).jpg"
+                alt="상품 2"
+                width="300"
+                height="200"
+              />
+            </a>
+            <h3>상품 2</h3>
+            <p>상품 2의 설명</p>
+          </div>
+          <div class="product-item">
+            <a href="/goods_detail/1">
+              <img
+                src="/goods/다운로드.jpg"
+                alt="상품 1"
+                width="300"
+                height="200"
+              />
+            </a>
+            <h3>상품 1</h3>
+            <p>상품 1의 설명</p>
+          </div>
+          <div class="product-item">
+            <a href="/goods_detail/1">
+              <img
+                src="/goods/다운로드.jpg"
+                alt="상품 1"
+                width="300"
+                height="200"
+              />
+            </a>
+            <h3>상품 1</h3>
+            <p>상품 1의 설명</p>
+          </div>
+        </div>
+        <div class="product-item">
+          <a href="/goods_detail/1">
+            <img
+              src="/goods/다운로드.jpg"
+              alt="상품 1"
+              width="300"
+              height="200"
+            />
+          </a>
+          <h3>상품 1</h3>
+          <p>상품 1의 설명</p>
+        </div>
+        <!-- Loop over your data and generate square boxes -->
+        <div th:each="cat : ${cats}" class="cat-box">
+          <img th:src="${cat.imageUrl}" alt="Cat Image" />
+          <p th:text="${cat.name}"></p>
+        </div>
+      </div>
+    </div>
+
+    <footer th:replace="layout::footer"></footer>
+  </body>
+</html>
